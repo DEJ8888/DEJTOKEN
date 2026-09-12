@@ -7,7 +7,33 @@
 <title>DEJ Token — Official</title>
 
 <meta name="description" content="Official website and information for DEJ Token.">
+.buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 15px 28px;
+    background: linear-gradient(135deg, #ffffff, #dfe6ff);
+    color: #080c18;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: all 0.2s ease;
+}
 
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255,255,255,0.15);
+}
+
+.buy-button:active {
+    transform: translateY(0);
+}
 <style>
 * {
     box-sizing: border-box;
@@ -142,7 +168,6 @@ footer {
 </head>
 
 <body>
-    <body>
   <img src="dej-logo.png" alt="DEJ Token Logo">
 
 <div class="container">
@@ -155,7 +180,9 @@ footer {
 <a class="button" href="https://t.me/dejcrypto" target="_blank" rel="noopener">Telegram</a>
 <a class="button" href="https://www.facebook.com/share/19coHuWpMb/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
 <a class="button" href="https://www.tiktok.com/@dejgroup.proton.m?_r=1&_t=ZS-99fb5N1cFCT" target="_blank" rel="noopener">TikTok</a>
-    <a class="button" href="https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2" target="_blank" rel="noopener">Buy DEJ</a>
+    <a class="buy-button" href="https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2" target="_blank" rel="noopener">
+    Buy DEJ ↗
+</a>
 
 <header class="hero">
     <h1>DEJ Token</h1>
