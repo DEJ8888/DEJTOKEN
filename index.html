@@ -243,17 +243,25 @@ for users, exchanges, explorers, and community members.
 
 </section>
 
-<section>
+    <section>
 
 <h2>Contract Information</h2>
 
-<div class="card">
+<div class="card contract-card">
 
 <strong>Ethereum Contract Address</strong>
 
-<p class="address">
-0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2
-</p>
+<div class="contract-row">
+    <p class="address">
+        0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2
+    </p>
+
+    <button class="copy-button" onclick="copyContract()">
+        Copy
+    </button>
+</div>
+
+<p id="copy-message" class="copy-message"></p>
 
 </div>
 
