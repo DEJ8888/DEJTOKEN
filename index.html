@@ -3,10 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>DEJ Token — Official</title>
-
 <meta name="description" content="Official website and information for DEJ Token.">
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080c18;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+nav {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.hero {
+    padding: 90px 0;
+}
+.hero h1 {
+    font-size: 70px;
+    margin: 0 0 20px;
+}
+.hero p {
+    font-size: 21px;
+    color: #b9c2d8;
+    max-width: 700px;
+}
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 22px;
+    background: white;
+    color: #080c18;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+section {
+    padding: 45px 0;
+}
+h2 {
+    font-size: 32px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #12182a;
+    border: 1px solid #29334e;
+    border-radius: 16px;
+    padding: 25px;
+}
+.card strong {
+    font-size: 16px;
+    color: #aeb7cc;
+}
+.card p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.address {
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 16px !important;
+}
+.muted {
+    color: #aeb7cc;
+}
+footer {
+    margin-top: 40px;
+    padding: 35px 0;
+    border-top: 1px solid #29334e;
+    color: #8993aa;
+}
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.social-links a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #29334e;
+    border-radius: 10px;
+    color: #f5f7ff;
+    text-decoration: none;
+    background: #12182a;
+    font-weight: bold;
+}
+.social-links a:hover {
+    background: #1b243d;
+}
+/* BUY DEJ */
 .buy-button {
     display: inline-flex;
     align-items: center;
@@ -25,27 +130,24 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     transition: all 0.2s ease;
 }
-
 .buy-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(255,255,255,0.15);
 }
-
 .buy-button:active {
     transform: translateY(0);
 }
-    .contract-row {
+/* CONTRACT */
+.contract-row {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 10px;
 }
-
 .contract-row .address {
     flex: 1;
     margin: 0;
 }
-
 .copy-button {
     padding: 10px 16px;
     border: 1px solid #29334e;
@@ -55,273 +157,104 @@
     font-weight: bold;
     cursor: pointer;
 }
-
 .copy-button:hover {
     background: #25304d;
 }
-
 .copy-message {
     margin: 8px 0 0;
     color: #aeb7cc;
     font-size: 14px;
 }
-
-@media (max-width: 600px) {
-    .contract-row {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .copy-button {
-        width: 100%;
-    }
-}
-<style>
-* {
-    box-sizing: border-box;
-}
-<script>
-function copyContract() {
-    const address = "0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2";
-
-    navigator.clipboard.writeText(address).then(() => {
-        document.getElementById("copy-message").textContent =
-            "Contract address copied ✓";
-    });
-}
-</script>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #080c18;
-    color: #f5f7ff;
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-nav {
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.hero {
-    padding: 90px 0;
-}
-
-.hero h1 {
-    font-size: 70px;
-    margin: 0 0 20px;
-}
-
-.hero p {
-    font-size: 21px;
-    color: #b9c2d8;
-    max-width: 700px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 13px 22px;
-    background: white;
-    color: #080c18;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-section {
-    padding: 45px 0;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #12182a;
-    border: 1px solid #29334e;
-    border-radius: 16px;
-    padding: 25px;
-}
-
-.card strong {
-    font-size: 16px;
-    color: #aeb7cc;
-}
-
-.card p {
-    font-size: 20px;
-    margin-bottom: 0;
-}
-
-.address {
-    word-break: break-all;
-    font-family: monospace;
-    font-size: 16px !important;
-}
-
-.muted {
-    color: #aeb7cc;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 35px 0;
-    border-top: 1px solid #29334e;
-    color: #8993aa;
-}
-.social-links {
-    margin-top: 25px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.social-links a {
-    display: inline-block;
-    padding: 10px 16px;
-    border: 1px solid #29334e;
-    border-radius: 10px;
-    color: #f5f7ff;
-    text-decoration: none;
-    background: #12182a;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    background: #1b243d;
-}
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 50px;
     }
+    .contract-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .copy-button {
+        width: 100%;
+    }
 }
 </style>
 </head>
-
 <body>
-  <img src="dej-logo.png" alt="DEJ Token Logo">
-
+<img src="dej-logo.png" alt="DEJ Token Logo">
 <div class="container">
-
 <nav>
     <div class="logo">DEJ</div>
     <a class="button" href="#details">Token Details</a>
 </nav>
-    <a class="button" href="https://x.com/dejgroup?s=11" target="_blank" rel="noopener">X</a>
+<a class="button" href="https://x.com/dejgroup?s=11" target="_blank" rel="noopener">X</a>
 <a class="button" href="https://t.me/dejcrypto" target="_blank" rel="noopener">Telegram</a>
 <a class="button" href="https://www.facebook.com/share/19coHuWpMb/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
 <a class="button" href="https://www.tiktok.com/@dejgroup.proton.m?_r=1&_t=ZS-99fb5N1cFCT" target="_blank" rel="noopener">TikTok</a>
-    <a class="buy-button" href="https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2" target="_blank" rel="noopener">
-    Buy DEJ ↗
+<a class="buy-button"
+   href="https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2"
+   target="_blank"
+   rel="noopener">
+   Buy DEJ ↗
 </a>
-
 <header class="hero">
     <h1>DEJ Token</h1>
-
     <p>
         Official website and information for DEJ Token.
         Explore the official token details, blockchain network,
         and contract information.
     </p>
-
     <a class="button" href="#details">Explore DEJ</a>
 </header>
-
 <section id="details">
-
 <h2>Token Details</h2>
-
 <div class="grid">
-
 <div class="card">
 <strong>Symbol</strong>
 <p>DEJ</p>
 </div>
-
 <div class="card">
 <strong>Total Supply</strong>
 <p>1,000,000,000 DEJ</p>
 </div>
-
 <div class="card">
 <strong>Decimals</strong>
 <p>18</p>
 </div>
-
 <div class="card">
 <strong>Asset Type</strong>
 <p>Token</p>
 </div>
-
 <div class="card">
 <strong>Blockchain</strong>
 <p>Ethereum</p>
 </div>
-
 </div>
-
 </section>
-
 <section>
-
 <h2>About DEJ</h2>
-
 <p class="muted">
 DEJ is a blockchain-based digital token.
 This website provides official project information
 for users, exchanges, explorers, and community members.
 </p>
-
 </section>
-
-    <section>
-
-<h2>Contract Information</h2>
-
-<div class="card contract-card">
-
-<strong>Ethereum Contract Address</strong>
-
-<div class="contract-row">
-    <p class="address">
-        0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2
-    </p>
-
-    <button class="copy-button" onclick="copyContract()">
-        Copy
-    </button>
-</div>
-
-<p id="copy-message" class="copy-message"></p>
-
-</div>
-
-</section>
-
 <section>
-
+<h2>Contract Information</h2>
+<div class="card contract-card">
+<strong>Ethereum Contract Address</strong>
+<div class="contract-row">
+<p class="address">
+0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2
+</p>
+<button class="copy-button" onclick="copyContract()">
+Copy
+</button>
+</div>
+<p id="copy-message" class="copy-message"></p>
+</div>
+</section>
+<section>
 <h2>Disclaimer</h2>
-
 <p class="muted">
 The information on this website is provided for informational
 purposes only and does not constitute financial, investment,
@@ -329,14 +262,43 @@ legal, or tax advice. Digital assets involve risk. Please
 conduct your own research and verify all contract information
 before interacting with the token.
 </p>
-
 </section>
-
 <footer>
 © 2026 DEJ Token. All rights reserved.
 </footer>
-
 </div>
-
+<script>
+function copyContract() {
+    const address = "0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2";
+    const message = document.getElementById("copy-message");
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(address)
+            .then(function() {
+                message.textContent = "Contract address copied ✓";
+            })
+            .catch(function() {
+                fallbackCopy(address, message);
+            });
+    } else {
+        fallbackCopy(address, message);
+    }
+}
+function fallbackCopy(text, message) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    try {
+        document.execCommand("copy");
+        message.textContent = "Contract address copied ✓";
+    } catch (error) {
+        message.textContent = "Please copy the address manually.";
+    }
+    document.body.removeChild(textarea);
+}
+</script>
 </body>
 </html>
