@@ -34,11 +34,62 @@
 .buy-button:active {
     transform: translateY(0);
 }
+    .contract-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.contract-row .address {
+    flex: 1;
+    margin: 0;
+}
+
+.copy-button {
+    padding: 10px 16px;
+    border: 1px solid #29334e;
+    border-radius: 9px;
+    background: #1a2238;
+    color: #f5f7ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #25304d;
+}
+
+.copy-message {
+    margin: 8px 0 0;
+    color: #aeb7cc;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .contract-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .copy-button {
+        width: 100%;
+    }
+}
 <style>
 * {
     box-sizing: border-box;
 }
+<script>
+function copyContract() {
+    const address = "0xd6306Fdf68648F5e6E8c9Ce640E6D0744fDb35c2";
 
+    navigator.clipboard.writeText(address).then(() => {
+        document.getElementById("copy-message").textContent =
+            "Contract address copied ✓";
+    });
+}
+</script>
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
